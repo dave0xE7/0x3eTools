@@ -2,8 +2,16 @@
 
 echo "getting 0x3e tools onto this machine..."
 
-sudo apt-get install git -y
-sudo apt-get install dialog -y
+requiredPackages="git dialog"
+
+if [ "$EUID" -ne 0 ]
+    sudo apt-get install $requiredPackages -y
+    then echo "Please run as root"
+    #exit
+else
+    apt install $requiredPackages -y
+fi
+
 
 destpath=~/.0x3e
 echo $destpath
