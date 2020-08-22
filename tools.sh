@@ -37,7 +37,7 @@ case $CHOICE in
             echo "You chose FastForwardShell"
             bash "$scriptspath/ffwd.sh"
             ;;
-        3)
+        4)
             echo "You chose Update"
             cd $basepath
             git update
