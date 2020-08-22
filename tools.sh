@@ -1,5 +1,8 @@
 #!/bin/bash
 
+basepath=~/.0x3e
+scriptspath="$basepath/scripts"
+
 HEIGHT=15
 WIDTH=40
 CHOICE_HEIGHT=4
@@ -23,14 +26,19 @@ clear
 case $CHOICE in
         1)
             echo "You chose Virtual Machines"
-            bash "scripts/vms.sh"
+            bash "$scriptspath/vms.sh"
             ;;
         2)
             echo "You chose Webspaces"
-            bash "scripts/webspaces.sh"
+            bash "$scriptspath/webspaces.sh"
             ;;
         3)
             echo "You chose FastForwardShell"
-            bash "scripts/ffwd.sh"
+            bash "$scriptspath/ffwd.sh"
+            ;;
+        3)
+            echo "You chose Update"
+            cd $basepath
+            git update
             ;;
 esac

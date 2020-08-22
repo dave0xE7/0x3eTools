@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+
 path=~/.0x3e
 bashrcline="alias 0x3e='bash $path/tools.sh'"
 
@@ -21,5 +23,8 @@ if [[ " $file_content " =~ $regex ]] # please note the space before and after th
         echo  $bashrcline >> ~/.bashrc
 fi
 
+echo "You can now use the command '0x3e' in your shell"
+
+bash
 
 exit

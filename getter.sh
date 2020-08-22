@@ -2,6 +2,9 @@
 
 echo "getting 0x3e tools onto this machine..."
 
+sudo apt-get install git -y
+sudo apt-get install dialog -y
+
 destpath=~/.0x3e
 echo $destpath
 
