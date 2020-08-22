@@ -10,15 +10,16 @@ echo $destpath
 
 if test -d $destpath/; then
     echo "found $destpath"
+    cd $destpath
+    git update
 else
     echo "create .0x3e/"
     mkdir $destpath;
+    git clone https://github.com/dave0xE7/0x3eTools $destpath/.
 fi
 echo $0
 #cp $0 $path/.
 cd $destpath/
-
-git clone https://github.com/dave0xE7/0x3eTools $destpath/.
 
 bash $destpath/install.sh
 

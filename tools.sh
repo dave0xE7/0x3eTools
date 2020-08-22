@@ -12,7 +12,8 @@ MENU="select option:"
 
 OPTIONS=(1 "Virtual Machines"
          2 "Webspaces"
-         3 "FastForwardShell")
+         3 "FastForwardShell"
+         4 "Update 0x3e Tools")
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
