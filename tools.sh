@@ -40,6 +40,6 @@ case $CHOICE in
         4)
             echo "You chose Update"
             cd $basepath
-            git update
+            git pull
             ;;
 esac

@@ -19,7 +19,7 @@ echo $destpath
 if test -d $destpath/; then
     echo "found $destpath"
     cd $destpath
-    git update
+    git pull
 else
     echo "create .0x3e/"
     mkdir $destpath;
