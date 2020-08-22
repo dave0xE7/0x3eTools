@@ -2,6 +2,9 @@
 
 echo "getting 0x3e tools onto this machine..."
 
+startFilename=$0
+startPath=$(pwd)
+
 requiredPackages="git dialog"
 
 if [ "$EUID" -ne 0 ]
@@ -17,12 +20,15 @@ destpath=~/.0x3e
 echo $destpath
 
 if test -d $destpath/; then
-    echo "found $destpath"
+    echo "existing installation found $destpath"
+    echo "updating it..."
     cd $destpath
     git pull
 else
-    echo "create .0x3e/"
+    echo "no installation found"
+    echo "creating $destpath"
     mkdir $destpath;
+    echo "installing..."
     git clone https://github.com/dave0xE7/0x3eTools $destpath/.
 fi
 echo $0
