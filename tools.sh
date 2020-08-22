@@ -7,7 +7,7 @@ HEIGHT=15
 WIDTH=40
 CHOICE_HEIGHT=4
 BACKTITLE="0x3e Tools"
-TITLE="What U want?"
+TITLE="Main Menu"
 MENU="select option:"
 
 OPTIONS=(1 "Virtual Machines"
@@ -40,6 +40,6 @@ case $CHOICE in
         4)
             echo "You chose Update"
             cd $basepath
-            git pull
+            git fetch
             ;;
 esac
