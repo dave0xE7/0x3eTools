@@ -23,7 +23,7 @@ if test -d $destpath/; then
     echo "existing installation found $destpath"
     echo "updating it..."
     cd $destpath
-    git fetch
+    git pull origin master
 else
     echo "no installation found"
     echo "creating $destpath"
