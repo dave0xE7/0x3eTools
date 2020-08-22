@@ -10,7 +10,8 @@ BACKTITLE="0x3e Tools"
 TITLE="Main Menu"
 MENU="select option:"
 
-OPTIONS=(1 "Virtual Machines"
+OPTIONS=(0 "View README"
+         1 "Virtual Machines"
          2 "Webspaces"
          3 "FastForwardShell"
          4 "Update 0x3e Tools")
@@ -25,6 +26,10 @@ CHOICE=$(dialog --clear \
 
 clear
 case $CHOICE in
+        0)
+            echo "You chose to vie README"
+            bash "$scriptspath/readme.sh"
+            ;;
         1)
             echo "You chose Virtual Machines"
             bash "$scriptspath/vms.sh"
